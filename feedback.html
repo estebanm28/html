@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Styles_for_pages/style.css">
+    <script src="script.js" defer></script>
+    <title>Mora's Classic Car Club</title>
+</head>
+
+<body>
+    <header> 
+    <h1>Your Opinion Matters: Give Us Your Feedback!</h1>
+    <nav> 
+        <ul> 
+            <li> 
+                <a href="index.html">Home</a>
+                <a href="promotion.html">Promotion details</a>
+                <a href="about.html">About us</a>
+                <a href="feedback.html">Give us your feedback!</a>
+                <a href="support.html">Contact us</a>
+                <a href="corporate_information.html"> More about Mora's car club</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    <div class="general"> 
+    <div class="card_general"> 
+        <ul> 
+            <p>On our feedback page, we deeply value your opinions and comments. Your experience with us is what drives us to continually improve and provide exceptional service in the world of car sales. We want to hear from you and understand your needs and expectations.</p>
+            
+            <h3><strong>Why Your Feedback Matters:</strong></h3>
+            
+            <li>Your voice is essential to us. Your feedback helps us assess and enhance all aspects of our service, from the quality of our vehicles to interactions with our sales team and the purchasing process itself. We want to ensure that your experience is unmatched.</li>
+            
+            <h3><strong>How You Can Contribute:</strong></h3>
+            
+            <li>We offer various ways to provide your feedback. You can share your comments about your buying experience, interactions with our team, the quality of your vehicle, or any other significant aspect. You can also rate your experience and provide suggestions to make your next visit even better. </li>
+            
+            <h3> <strong> Our Promise to Listen:</strong></h3>
+            
+            <li> you share your feedback with us, it's not just an opinion; it's an opportunity for us to improve. We are committed to carefully reviewing each comment and using it to guide our focus on customer satisfaction. </li> 
+            
+            <h3> <strong> Join Our Community of Continuous Improvement: </strong></h3>
+            
+            <li>Your feedback is a vital part of our ever-evolving community. Join us to contribute to continuous improvement and ensure that your voice is heard.</li>
+            
+            Thank you for being a part of our automotive family and for helping us serve you better. We look forward to your valuable input, and we hope that your experience with us is always unmatched.
+        
+            <img src="" alt=""> 
+        </p>
+        </ul>
+
+
+    </div>
+    <div class="cardOpinionContainer">
+        <div class="cardOpinion">
+            <h2>Leave a Comment</h2>
+            <form id="commentForm">
+                <textarea id="commentInput" rows="4" cols="50" placeholder="Write your comment"></textarea><br>
+                <button type="button" class="styled-button" onclick="addComment()">Add Comment</button>
+            </form>
+        </div>
+
+        <div id="comment-container">
+            <!-- Aquí se mostrarán los comentarios -->
+        </div>
+        </div>
+</div>
+<script>
+    let commentCount = 1;
+
+    function addComment() {
+        const comment = document.getElementById('commentInput').value;
+        const commentsSection = document.getElementById('comment-container');
+
+        if (comment !== '') {
+            const commentContainer = document.createElement('div');
+            commentContainer.className = 'comment-container';
+            commentContainer.innerHTML = `
+                <div class="comment-content">
+                    <img src="images/user.jpg" alt="User">
+                    <div class="comment-text">
+                        <h3>Opinion ${commentCount}</h3>
+                        <p>${comment}</p>
+                    </div>
+                </div>
+            `;
+            commentsSection.appendChild(commentContainer);
+            commentCount++;
+            document.getElementById('commentInput').value = '';
+        } else {
+            alert('Please enter a comment!');
+        }
+    }
+    </script>
+
+</body>
+
+
+<footer>
+    <p>&copy; 2023 Mora's classic Car Club</p>
+</footer>
+
+</html>

@@ -1,0 +1,167 @@
+body{
+    margin: 0px;
+    padding: 0px; 
+    background-image: url("../images/example.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    
+}
+header {
+    background-color: rgb(46, 46, 51);
+    color:white; 
+    text-align: center;
+    padding: 20px 0; 
+    margin-bottom: 20px;
+
+}
+h1{
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2{
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+nav ul{
+    
+    list-style: none;
+    padding:0px;
+
+}
+
+nav li{
+    display: inline;
+    margin-right:50px;
+    
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0; /* Space among the menu elements in mobile devices*/
+    }
+}
+
+img{
+    max-width: 30%;
+    height: auto;
+    display:block;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+p{
+    text-align: center;
+    padding: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline; 
+    color: lightcoral;
+}
+footer{
+    background-color: rgb(46, 46, 51);
+    color:white; 
+    text-align: center;
+  
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+div{
+    margin: bottom 20px 20px;
+}
+.card_general {
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: left; 
+    background-color: rgba(200, 200, 200, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cardOpinion {
+    display: inline-block;
+    max-width: 600px;
+    background-color: rgba(200, 200, 200, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    justify-content: center; 
+}
+
+.comment-container {
+    margin: 10px auto;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff; /* Fondo blanco para resaltar los comentarios */
+    border-radius: 5px;
+}
+.cardOpinionContainer {
+    max-width: 600px; /* Ancho deseado para la tarjeta */
+    margin: 0 auto; /* Centra horizontalmente la tarjeta */
+    text-align: left; /* Ajusta el texto alineado a la izquierda */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333; /* Fondo negro para el botón */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: #555; /* Color gris cuando se pasa el ratón por encima */
+}
+
+.styled-button:active {
+    background-color: #111; /* Color más oscuro al hacer clic en el botón */
+}
+
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment-content {
+    display: flex;
+    align-items: center;
+}
+
+.comment-image {
+    width: 100px; /* Tamaño de la imagen */
+    height: auto; /* Altura automática según el ancho */
+   margin-right: 20px; /* Espacio a la derecha de la imagen */
+}
+.general {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto; /* Centra el contenedor principal */
+}
